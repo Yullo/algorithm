@@ -1,3 +1,5 @@
+package sort;
+
 /**
  * Created by painsolace on 2017/4/26.
  * 冒泡排序, 思想: 依次比较相邻的两个元素，大的放在后面
