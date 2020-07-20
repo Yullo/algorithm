@@ -26,7 +26,7 @@ public class Solution215 {
      */
 
 
-    // 后续需要自己实现一个堆排序
+    // 后续需要自己实现一个堆排序， 时间复杂度 O(nlogk) , 空间复杂度 O(k)
     public int findKthLargest(int[] nums, int k) {
         // 构建数量为K的小顶堆
         PriorityQueue<Integer> queue = new PriorityQueue<>();
@@ -42,4 +42,6 @@ public class Solution215 {
         }
         return queue.peek();
     }
+
+    // 更快的算法，时间复杂度 O(n), 空间复杂度 O(1)
 }
