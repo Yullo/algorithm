@@ -51,6 +51,7 @@ public class Solution200 {
         return res;
     }
 
+    // 把与第一个1相连的其他1都置成0
     private void dfs(char[][] grid, int x, int y) {
         if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] == '0') {
             return;

@@ -6,6 +6,8 @@ package leetcode;
 public class Solution3 {
 
     /**
+     * 3. 无重复字符的最长子串
+     *
      * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
      *
      * 示例 1:
@@ -36,11 +38,16 @@ public class Solution3 {
         int res = 0;
 
         while (right < s.length()) {
+            // 子串，不包含 right
             String sub = s.substring(left, right);
+            // 拿到right的元素
             String charAt = s.charAt(right) + "";
+            // 子串已包含
             if (sub.contains(charAt)) {
+                // 右边框不动，移动左边框，缩小窗口
                 left++;
             } else {
+                // 字串未包含下一个元素，扩展窗口, 纳入元素
                 right++;
             }
             res = Math.max(res, right - left);

@@ -28,6 +28,8 @@ public class Solution334 {
      * 输出: false
      *
      * 链接：https://leetcode-cn.com/problems/increasing-triplet-subsequence
+     *
+     * 相似：300
      */
 
     public boolean increasingTriplet(int[] nums) {

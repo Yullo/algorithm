@@ -14,6 +14,8 @@ public class Solution2 {
 
 
     /**
+     * 2. 两数相加
+     *
      * 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，
      * 并且它们的每个节点只能存储 一位 数字。
      *
@@ -28,6 +30,8 @@ public class Solution2 {
      * 原因：342 + 465 = 807
      *
      * 链接：https://leetcode-cn.com/problems/add-two-numbers
+     *
+     * TAG: 链表
      */
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -69,5 +73,30 @@ public class Solution2 {
         }
 
         return header.next;
+    }
+
+    // 上面有些重复代码, 优化一下
+    public ListNode addTwoNumbersV2(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(-1);
+        ListNode cur = dummy;
+        int jin = 0;
+        while (l1 != null || l2 != null) {
+            int p = l1 != null ? l1.val : 0;
+            int q = l2 != null ? l2.val : 0;
+            int res = p + q + jin;
+            jin = res / 10;
+            res = res % 10;
+            ListNode node = new ListNode(res);
+            cur.next = node;
+            cur = cur.next;
+
+            if (l1 != null) l1 = l1.next;
+            if (l2 != null) l2 = l2.next;
+        }
+        if (jin > 0) {
+            ListNode node = new ListNode(jin);
+            cur.next = node;
+        }
+        return dummy.next;
     }
 }

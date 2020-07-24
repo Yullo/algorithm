@@ -32,7 +32,7 @@ public class Solution128 {
         // 遍历
         for (int num : nums) {
             // 从最小的起点开始查找，如果不是最小起点的数，说明已经查找过了，跳过即可
-            if (!set.contains(num - 1)) {
+            if (!set.contains(num - 1)) { // 判断当前数的前一个数
                 // 计数
                 int temp = 0;
                 while (set.contains(num++)) {

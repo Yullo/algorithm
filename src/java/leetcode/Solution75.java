@@ -28,6 +28,8 @@ public class Solution75 {
      * 你能想出一个仅使用常数空间的一趟扫描算法吗？
      *
      * 链接：https://leetcode-cn.com/problems/sort-colors
+     *
+     * TAG：三指针（荷兰国旗）
      */
 
     // 三指针

@@ -6,6 +6,8 @@ package leetcode;
 public class Solution10 {
 
     /**
+     * 10. 正则表达式匹配
+     *
      * 给你一个字符串 s 和一个字符规律 p，请你来实现一个支持 '.' 和 '*' 的正则表达式匹配。
      *
      * '.' 匹配任意单个字符
@@ -52,6 +54,8 @@ public class Solution10 {
      * 输出: false
      *
      * 链接：https://leetcode-cn.com/problems/regular-expression-matching
+     *
+     * TAG：递归
      */
     public boolean isMatch(String s, String p) {
         if (p == null || p.length() == 0) {

@@ -5,6 +5,8 @@ package leetcode;
  */
 public class Solution5 {
     /**
+     * 5. 最长回文子串
+     *
      * 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
      *
      * 示例 1：
@@ -33,6 +35,7 @@ public class Solution5 {
 
     //同时处理回文串长度为奇数和偶数的情况
     private String search(String s, int left, int right) {
+        // 从中间向两边扩散
         while (left >= 0 && right <= s.length() - 1 && s.charAt(left) == s.charAt(right)) {
             left--;
             right++;
