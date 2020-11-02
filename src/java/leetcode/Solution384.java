@@ -50,7 +50,7 @@ public class Solution384 {
         /** Returns a random shuffling of the array. */
         public int[] shuffle() {
             int[] shuffle = Arrays.copyOf(nums, nums.length);
-            for (int i = shuffle.length - 1; i >= 0; i++) {
+            for (int i = shuffle.length - 1; i >= 0; i--) {
                 int nextInt = random.nextInt(i + 1);
                 int t = shuffle[nextInt];
                 shuffle[nextInt] = shuffle[i];
