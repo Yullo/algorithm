@@ -15,7 +15,7 @@ public class SortMain {
         sort = new QuickSort();
         sort = new ShellSort();
         sort = new MergeSort();
-        sort = new BubbleSort();
+        sort = new BucketSort();
 
         sort.sort(arr);
         System.out.println(Arrays.toString(arr));

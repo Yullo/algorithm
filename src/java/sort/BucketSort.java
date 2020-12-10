@@ -16,6 +16,10 @@ public class BucketSort implements Sort {
         // 构建一个桶 （构建什么样的桶，桶的范围怎么定是桶排序的关键）
         List<List<Integer>> list = new ArrayList<>();
         // 这里准备3个桶， - - 2， 3 - 5， 6 - +
+        for (int i = 0; i < 3; i++) {
+            list.add(new ArrayList<>());
+        }
+        // 遍历数据放入桶中
         for (int i = 0; i < arr.length; i++) {
             int idx = 0;
             if (arr[i] <= 2) {
@@ -26,9 +30,6 @@ public class BucketSort implements Sort {
                 idx = 2;
             }
             List<Integer> bucket = list.get(idx);
-            if (bucket == null) {
-                bucket = new ArrayList<>();
-            }
             bucket.add(arr[i]);
         }
         // 对每个桶进行排序
