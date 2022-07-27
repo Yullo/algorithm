@@ -69,7 +69,7 @@ public class Solution230 {
         }
 
     }
-
+    // 查找子树的节点个数
     private int findNum(TreeNode node) {
         if (node == null) {
             return 0;
